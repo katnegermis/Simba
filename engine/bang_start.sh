@@ -1,8 +1,11 @@
+
 export SPARK_MASTER_IP=127.0.0.1
 export SPARK_MASTER_PORT=7077
+
+# Start master
 sbin/start-master.sh
 
-
+# Start slave
 if [ "$SPARK_SLAVE_CORES" = "" ]; then
   export SPARK_SLAVE_CORES=4
 fi
